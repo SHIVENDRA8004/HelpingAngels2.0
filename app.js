@@ -4,9 +4,8 @@ const app = express();
 app.listen(3000, () => {
   console.log("Server Started on port 3000");
 });
-app.use(morgan("dev"));
+app.use(morgan("tiny"));
 app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index");
-  console.log(req.url, req.method);
 });
